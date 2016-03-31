@@ -1,0 +1,41 @@
+<div style="width:90px; min-height:80px;" class="cmd tooltips cmd-widget cursor container-fluid" data-type="info" data-subtype="numeric" data-cmd_id="#id#">
+    <center>
+        <span style="font-weight: bold;font-size : 12px;" id="namecmd#id#"></span>
+        <span style="font-weight: bold;font-size : 0.8em;">#name#</span>
+        <span style="font-size: 3.5em;" class="iconCmd#id#"></span>
+        <span class='label label-info' style="font-size: 0.8em;">#state# #unite#</span>     
+        <span style="#displayHistory# font-size: 0.8em;" class="col-xs-12 center-block">
+        <span title='Min' class='tooltips'>#minHistoryValue#</span>|<span title='Moyenne' class='tooltips'>#averageHistoryValue#</span>|<span title='Max' class='tooltips'>#maxHistoryValue#</span> <i class="#tendance#"></i></span>
+     </center>
+   
+     
+<!-- Ne Pas Supprimer -->
+   <script class="createWidgetInfo" type="text/javascript">//<![CDATA[{"type":"0","version":"1","min":["0","1","2","3","4","5","6","7","8","9","10","11"],"max":["1","2","3","4","5","6","7","8","9","10","11","12"],"icons":["<i class=\"icon nature-planet5\"></i>","<i class=\"icon nature-planet5\"></i>","<i class=\"icon nature-planet5\"></i>","<i class=\"icon nature-planet5\"></i>","<i class=\"icon nature-planet5\"></i>"]}]]></script>
+<!-- Ne Pas Supprimer -->
+   <script>
+
+   
+      var temp = Math.round((#maxValue# - #minValue#) * #state# / 100)
+      $(".iconCmd#id#").empty();
+      if (temp >= 0 && temp <= 2) {
+         $('.iconCmd#id#').append('<i class="icon nature-planet5"></i>').css('color','green');
+         
+      }
+      if (temp > 2 && temp <= 4) {
+         $('.iconCmd#id#').append('<i class="icon nature-planet5"></i>').css('color','yellow');
+
+      }
+      if (temp > 4 && temp < 6) {
+         $('.iconCmd#id#').append('<i class="icon nature-planet5"></i>').css('color','orange');
+
+      }
+      if (temp >= 6 && temp <= 8) {
+         $('.iconCmd#id#').append('<i class="icon nature-planet5"></i>').css('color','red');
+
+      }
+      if (temp > 8 && temp <= 100) {
+         $('.iconCmd#id#').append('<i class="icon nature-planet5"></i>').css('color','black');
+
+      }
+   </script>
+</div>

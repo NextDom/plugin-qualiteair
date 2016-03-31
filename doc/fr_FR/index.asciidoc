@@ -1,0 +1,31 @@
+== Indices Qualité de l'Air
+
+=== Description
+Le plugin Indices Qualité de l'Air permet de récupérer les Indices Qualité de l'Air. Il suffit de selectionne la ville.
+Les données disponible sont 
+
+Indice : Cet indice est calculé à partir des concentrations en polluants relevés par les stations urbaines et périurbaines représentatives de zones de pollution homogène.
+
+Indice du lendemain
+
+Indice O3 : Ozone (O3)
+
+Indice NO2 : Dioxyde d’azote (NO2)
+
+Indice S02 : Dioxyde de soufre (SO2)
+
+Indice PM10 : Particules passant dans un orifice d’entrée calibré tel que défini dans la méthode de référence pour l’échantillonnage et la mesure du PM10, norme EN 12 341, avec un rendement de séparation de 50 % pour un diamètre aérodynamique de 10 μm 
+
+image::../images/qualiteair_screenshot2.jpg[]
+
+Plus de détail sur http://www.atmopaca.org/atmo/indice_atmo.php[atmopaca.org]
+=== Configuration
+include::configuration.asciidoc[]
+
+'''
+=== FAQ
+include::faq.asciidoc[]
+
+'''
+=== Changelog
+include::changelog.asciidoc[]

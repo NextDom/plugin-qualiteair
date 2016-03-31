@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>qualiteair</id>
+    <name>Indices Qualité de l'Air</name>
+    <description>Plugin pour connaitre les Indices Qualité de l'Air d'une ville</description>
+    <icon>icon divers-triangular42</icon>
+    <licence>AGPL</licence>
+    <author>Thomas Guenneguez</author>
+    <installation>Aucune</installation>
+    <require>1.150</require>
+    <version>1.2</version>
+    <category>weather</category>
+</info>
+
