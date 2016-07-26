@@ -11,3 +11,7 @@ Les données sont mises à jour toutes les heures.
 --
 Indice du jour, du lendemain, O3, NO2, SO2, PM10.
 --
+.Quels sont les villes supportées ?
+--
+http://www.lcsqa.org/surveillance/indices/liste/jour
+--
