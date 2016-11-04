@@ -1,0 +1,3 @@
+﻿Pour le configurer c’est très simple il suffit de créer un équipement et de renseigner la ville.
+
+image::../images/qualiteair_screenshot1.jpg[]

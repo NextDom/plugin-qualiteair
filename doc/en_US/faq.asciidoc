@@ -1,0 +1,13 @@
+[panel,primary]
+.Peut on avoir les futures données pour le lendemain
+--
+Oui si elles sont sur le site www.atmopaca.org.
+--
+.A quelle fréquence les données sont-elles mise à jour ?
+--
+Les données sont mises à jour toutes les heures.
+--
+.Quels sont les indices fournis ?
+--
+Indice du jour, du lendemain, O3, NO2, SO2, PM10.
+--
