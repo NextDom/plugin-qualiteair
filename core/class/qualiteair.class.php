@@ -27,13 +27,13 @@ class qualiteair extends eqLogic {
 
 	public static function ListVille() {
 		$status1 = $status2 = array();
-		$data = simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time() - 24 * 60 * 60));
+		$data = @simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time() - 24 * 60 * 60));
 		if ( $data !== false )
 		{
 			$xpathModele = '//agglomeration';
 			$status1 = $data->xpath($xpathModele);
 		}
-		$data = simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time()));
+		$data = @simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time()));
 		if ( $data !== false )
 		{
 			$xpathModele = '//agglomeration';
@@ -174,10 +174,10 @@ class qualiteair extends eqLogic {
 		if ( $this->getIsEnable() ) {
 			log::add('qualiteair','debug','pull '.$this->getName());
 			$statuscmd = $this->getCmd(null, 'status');
-			$data = simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d'));
+			$data = @simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d'));
 			$count = 0;
 			while ( $data === false && $count < 3 ) {
-				$data = simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d'));
+				$data = @simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d'));
 				$count++;
 			}
 			if ( $data === false ) {
@@ -193,7 +193,7 @@ class qualiteair extends eqLogic {
 			if ( count($status) != 0 ) {
 				foreach ($status[0] as $key => $value) {
 					$eqLogic_cmd = $this->getCmd(null, $key);
-					if ( is_object($eqLogic_cmd) && $eqLogic_cmd->execCmd(null, 2) != $eqLogic_cmd->formatValue($value)) {
+					if ( is_object($eqLogic_cmd) && $eqLogic_cmd->execCmd() != $eqLogic_cmd->formatValue($value)) {
 						log::add('qualiteair','debug',"Change ".$eqLogic_cmd->getName());
 						$eqLogic_cmd->setCollectDate('');
 						$eqLogic_cmd->event($value);
@@ -206,10 +206,10 @@ class qualiteair extends eqLogic {
 				$statuscmd->setCollectDate('');
 				$statuscmd->event(0);
 			}
-			$data = simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time() + 24 * 60 * 60));
+			$data = @simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time() + 24 * 60 * 60));
 			$count = 0;
 			while ( $data === false && $count < 3 ) {
-				$data = simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time() + 24 * 60 * 60));
+				$data = @simplexml_load_file("http://www.lcsqa.org/surveillance/indices/prevus/jour/xml/".date('Y-m-d', time() + 24 * 60 * 60));
 				$count++;
 			}
 			$xpathModele = '//agglomeration[. ="'.$this->getConfiguration('ville').'"]/parent::*';
@@ -217,7 +217,7 @@ class qualiteair extends eqLogic {
 			if ( count($status) != 0 ) {
 				foreach ($status[0] as $key => $value) {
 					$eqLogic_cmd = $this->getCmd(null, $key);
-					if ( is_object($eqLogic_cmd) && $eqLogic_cmd->execCmd(null, 2) != $eqLogic_cmd->formatValue($value)) {
+					if ( is_object($eqLogic_cmd) && $eqLogic_cmd->execCmd() != $eqLogic_cmd->formatValue($value)) {
 						log::add('qualiteair','debug',"Change ".$eqLogic_cmd->getName());
 						$eqLogic_cmd->setCollectDate('');
 						$eqLogic_cmd->event($value);
