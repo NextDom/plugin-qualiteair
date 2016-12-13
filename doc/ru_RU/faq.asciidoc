@@ -11,3 +11,18 @@ Les données sont mises à jour toutes les heures.
 --
 Indice du jour, du lendemain, O3, NO2, SO2, PM10.
 --
+.Quels sont les villes supportées ?
+--
+http://www.lcsqa.org/surveillance/indices/liste/jour
+--
+
+.Pourquoi le plugin est gratuit ?
+--
+Ce plugin est gratuit pour que chacun puisse en profiter simplement. Si vous souhaitez tout de même faire un don au développeur du plugin, utilisez le lien suivant.
+link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HMT2XTYH8HWQU[Faire un don au développeur du plugin]
+--
+
+.J'aimerai remonter des erreurs/modifications directement dans le code ?
+--
+C'est tout à fait possible via https://github.com/guenneguezt/plugin-qualiteair[github]
+--
