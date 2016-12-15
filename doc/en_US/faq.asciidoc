@@ -1,7 +1,7 @@
 [panel,primary]
 .Peut on avoir les futures données pour le lendemain
 --
-Oui si elles sont sur le site www.atmopaca.org.
+Yes if they are on www.atmopaca.org.
 --
 .A quelle fréquence les données sont-elles mise à jour ?
 --

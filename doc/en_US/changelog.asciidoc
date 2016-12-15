@@ -1,7 +1,7 @@
 [horizontal]
 1.2:: Correction par rapport au nouveau core.
 
-1.1:: Ajout de widget.
+1.1:: Add of widget.
 +
 Ajout d'un status.
 +
