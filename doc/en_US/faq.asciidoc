@@ -1,5 +1,5 @@
 [panel,primary]
-.Peut on avoir les futures données pour le lendemain
+. Can we have given the next future datas for the day after
 --
 Yes if they are on www.atmopaca.org.
 --

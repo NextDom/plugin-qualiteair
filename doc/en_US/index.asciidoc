@@ -1,4 +1,4 @@
-== Indices Qualité de l'Air
+== Air Quality Indices
 
 === Description
 Le plugin Indices Qualité de l'Air permet de récupérer les Indices Qualité de l'Air. Il suffit de selectionne la ville.
