@@ -6,4 +6,4 @@
 Ajout d'un status.
 +
 Recherche la ville dans les données de la veille car elles ne sont pas à jour tout le temps.
-1.0:: Initialisation du plugin.
+1.0:: Initialisierung des Plugins.
