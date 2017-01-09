@@ -1,4 +1,6 @@
 [horizontal]
+1.3:: Changement des URL de chez http://www.lcsqa.org/
+
 1.2:: Correction par rapport au nouveau core.
 
 1.1:: Ajout de widget.
