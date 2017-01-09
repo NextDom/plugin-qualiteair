@@ -1,7 +1,7 @@
 [panel,primary]
 .Peut on avoir les futures données pour le lendemain
 --
-Oui si elles sont sur le site www.atmopaca.org.
+Oui si elles sont sur le site http://www.lcsqa.orgg.
 --
 .A quelle fréquence les données sont-elles mise à jour ?
 --
@@ -13,7 +13,7 @@ Indice du jour, du lendemain, O3, NO2, SO2, PM10.
 --
 .Quels sont les villes supportées ?
 --
-http://www.lcsqa.org/surveillance/indices/liste/jour
+http://www.lcsqa.org/indices-qualite-air/liste
 --
 
 .Pourquoi le plugin est gratuit ?
