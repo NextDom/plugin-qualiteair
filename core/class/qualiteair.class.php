@@ -26,20 +26,26 @@ class qualiteair extends eqLogic {
     /*     * ***********************Methode static*************************** */
 
 	public static function ListVille() {
-		$status1 = $status2 = array();
-		$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/xml/".date('Y-m-d', time() - 24 * 60 * 60));
-		if ( $data !== false )
-		{
-			$xpathModele = '//agglomeration';
-			$status1 = $data->xpath($xpathModele);
-		}
+		$status1 = $status2 = $status3 = array();
 		$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/xml/".date('Y-m-d', time()));
 		if ( $data !== false )
 		{
 			$xpathModele = '//agglomeration';
 			$status2 = $data->xpath($xpathModele);
 		}
-		$status =  array_merge ($status1, $status2);
+		$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/xml/".date('Y-m-d', time() - 24 * 60 * 60));
+		if ( $data !== false )
+		{
+			$xpathModele = '//agglomeration';
+			$status1 = $data->xpath($xpathModele);
+		}
+		$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/xml/".date('Y-m-d', time() - 24 * 60 * 60 * 2));
+		if ( $data !== false )
+		{
+			$xpathModele = '//agglomeration';
+			$status3 = $data->xpath($xpathModele);
+		}
+		$status =  array_merge ($status1, $status2, $status3);
 		if ( count($status) != 0 )
 		{
 			sort($status, SORT_STRING);
