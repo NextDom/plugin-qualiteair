@@ -3,7 +3,7 @@
 --
 Oui si elles sont sur le site http://www.lcsqa.orgg.
 --
-.A quelle fréquence les données sont-elles mise à jour ?
+.Wie oft werden die Daten aktualisiert?
 --
 Les données sont mises à jour toutes les heures.
 --
