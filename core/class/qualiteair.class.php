@@ -49,7 +49,7 @@ class qualiteair extends eqLogic {
 		if ( count($status) != 0 )
 		{
 			sort($status, SORT_STRING);
-			return $status;
+			return array_unique ($status);
 		}
 		else
 		{
@@ -179,11 +179,12 @@ class qualiteair extends eqLogic {
 	public function pull() {
 		if ( $this->getIsEnable() ) {
 			log::add('qualiteair','debug','pull '.$this->getName());
+			log::add('qualiteair','debug','get http://www.lcsqa.org/indices-qualite-air/liste/jour');
 			$statuscmd = $this->getCmd(null, 'status');
-			$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/xml/".date('Y-m-d'));
+			$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/liste/jour");
 			$count = 0;
 			while ( $data === false && $count < 3 ) {
-				$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/xml/".date('Y-m-d'));
+				$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/liste/jour");
 				$count++;
 			}
 			if ( $data === false ) {
@@ -194,21 +195,23 @@ class qualiteair extends eqLogic {
 				log::add('qualiteair','error',__('Impossible de se connecter à www.lcsqa.org.',__FILE__));
 				return false;
 			}
-			$xpathModele = '//agglomeration[. ="'.$this->getConfiguration('ville').'"]/parent::*';
+			$xpathModele = '//td[. ="'.strtoupper($this->getConfiguration('ville')).'"]/parent::*';
 			$status = $data->xpath($xpathModele);
 			if ( count($status) != 0 ) {
-				foreach ($status[0] as $key => $value) {
-					$eqLogic_cmd = $this->getCmd(null, $key);
-					if ( is_object($eqLogic_cmd) && $eqLogic_cmd->execCmd() != $eqLogic_cmd->formatValue($value)) {
-						log::add('qualiteair','debug',"Change ".$eqLogic_cmd->getName());
-						$eqLogic_cmd->setCollectDate('');
-						$eqLogic_cmd->event($value);
-					}
+				foreach ($status as $col) {
+					log::add('qualiteair','debug',"col ".print_r($col, false));
+					#$eqLogic_cmd = $this->getCmd(null, $key);
+					#if ( is_object($eqLogic_cmd) && $eqLogic_cmd->execCmd() != $eqLogic_cmd->formatValue($value)) {
+					#	log::add('qualiteair','debug',"Change ".$eqLogic_cmd->getName());
+					#	$eqLogic_cmd->setCollectDate('');
+					#	$eqLogic_cmd->event($value);
+					#}
 				}				
 				$statuscmd->setCollectDate('');
 				$statuscmd->event(1);
 			}
 			else {
+				log::add('qualiteair','debug','no data found for today');
 				$statuscmd->setCollectDate('');
 				$statuscmd->event(0);
 			}
@@ -218,7 +221,7 @@ class qualiteair extends eqLogic {
 				$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/xml/".date('Y-m-d', time() + 24 * 60 * 60));
 				$count++;
 			}
-			$xpathModele = '//agglomeration[. ="'.$this->getConfiguration('ville').'"]/parent::*';
+			$xpathModele = '//agglomeration[. ="'.strtoupper($this->getConfiguration('ville')).'"]/parent::*';
 			$status = $data->xpath($xpathModele);
 			if ( count($status) != 0 ) {
 				foreach ($status[0] as $key => $value) {
@@ -229,6 +232,8 @@ class qualiteair extends eqLogic {
 						$eqLogic_cmd->event($value);
 					}
 				}
+			} else {
+				log::add('qualiteair','debug','no data found for tomorrow');
 			}
 			log::add('qualiteair','debug','pull end '.$this->getName());
 		}
