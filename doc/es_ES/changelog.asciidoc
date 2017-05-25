@@ -1,11 +1,15 @@
-[horizontal]
-1.3:: Changement des URL de chez http://www.lcsqa.org/
+WARNING: Detail complet des mises à jour sur https://github.com/guenneguezt/plugin-qualiteair/commits/master[Historique Commit]
 
-1.2:: Correction par rapport au nouveau core.
+Liste des évolutions majeures de la version courante :
 
-1.1:: Ajout de widget.
-+
-Ajout d'un status.
-+
-Recherche la ville dans les données de la veille car elles ne sont pas à jour tout le temps.
-1.0:: Initialisation du plugin.
+- Modification pour compatibilité Jeedom V3
+- Plus de suivi de version
+
+Anciennes évolutions :
+
+- Changement des URL de chez http://www.lcsqa.org/
+- Correction par rapport au nouveau core.
+- Ajout de widget.
+- Ajout d'un status.
+- Recherche la ville dans les données de la veille car elles ne sont pas à jour tout le temps.
+- Initialisation du plugin.
