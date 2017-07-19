@@ -1,0 +1,38 @@
+{
+    "plugins\/qualiteair\/plugin_info\/info.xml": {
+        "Plugin pour connaitre les Indices Qualité de l'Air d'une ville": "Plugin pour connaitre les Indices Qualité de l'Air d'une ville",
+        "Aucune": "Aucune"
+    },
+    "plugins\/qualiteair\/core\/class\/qualiteair.class.php": {
+        "Impossible de se connecter à www.lcsqa.org.": "Impossible de se connecter à www.lcsqa.org."
+    },
+    "plugins\/qualiteair\/plugin_info\/configuration.php": {
+        "Faire un don au développeur": "Faire un don au développeur",
+        "Faire un don via Paypal au développeur": "Faire un don via Paypal au développeur"
+    },
+    "plugins\/qualiteair\/desktop\/php\/qualiteair.php": {
+        "Ajouter une ville": "Ajouter une ville",
+        "Rechercher": "Rechercher",
+        "Gestion": "Gestion",
+        "Configuration": "Configuration",
+        "Mes villes": "Mes villes",
+        "Général": "Général",
+        "Nom de l'équipement": "Nom de l'équipement",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Ville": "Ville",
+        "Mes indicateurs": "Mes indicateurs",
+        "Id": "Id",
+        "Nom": "Nom",
+        "Valeur par défaut": "Valeur par défaut",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder"
+    },
+    "plugins\/qualiteair\/desktop\/js\/qualiteair.js": {
+        "Nom": "Nom",
+        "Historiser": "Historiser",
+        "Afficher": "Afficher"
+    }
+}
