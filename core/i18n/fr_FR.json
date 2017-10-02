@@ -6,10 +6,6 @@
     "plugins\/qualiteair\/core\/class\/qualiteair.class.php": {
         "Impossible de se connecter à www.lcsqa.org.": "Impossible de se connecter à www.lcsqa.org."
     },
-    "plugins\/qualiteair\/plugin_info\/configuration.php": {
-        "Faire un don au développeur": "Faire un don au développeur",
-        "Faire un don via Paypal au développeur": "Faire un don via Paypal au développeur"
-    },
     "plugins\/qualiteair\/desktop\/php\/qualiteair.php": {
         "Ajouter une ville": "Ajouter une ville",
         "Rechercher": "Rechercher",
