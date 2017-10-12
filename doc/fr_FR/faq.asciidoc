@@ -1,27 +1,27 @@
 [panel,primary]
-.Peut on avoir les futures données pour le lendemain
+.Peut-on avoir les futures données pour le lendemain ?
 --
-Oui si elles sont sur le site http://www.lcsqa.orgg.
+Oui si elles sont sur le site http://www.lcsqa.orgg/.
 --
-.A quelle fréquence les données sont-elles mise à jour ?
+.A quelle fréquence les données sont-elles mises à jour ?
 --
 Les données sont mises à jour toutes les heures.
 --
 .Quels sont les indices fournis ?
 --
-Indice du jour, du lendemain, O3, NO2, SO2, PM10.
+Indice du jour, du lendemain, O₃, NO₂, SO₂, PM10.
 --
-.Quels sont les villes supportées ?
+.Quelles sont les villes disponibles ?
 --
 http://www.lcsqa.org/indices-qualite-air/liste
 --
 
 .Pourquoi le plugin est payant ?
 --
-Ce plugin est payant par rapport au temps de développement qu'il m'a pris. Si vous souhaitez  faire un don suplémentaire au développeur du plugin, merci de passer par MP sur le forum.
+Ce plugin est payant par rapport au temps de développement qu'il m'a pris. Si vous souhaitez faire un don suplémentaire au développeur du plugin, merci de passer par MP sur le forum.
 --
 
-.J'aimerai remonter des erreurs/modifications directement dans le code ?
+.J'aimerais remonter des erreurs/modifications directement dans le code ?
 --
 C'est tout à fait possible via https://github.com/guenneguezt/plugin-qualiteair[github]
 --
