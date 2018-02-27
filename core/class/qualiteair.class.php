@@ -182,6 +182,7 @@ class qualiteair extends eqLogic {
 			log::add('qualiteair','debug','get http://www.lcsqa.org/indices-qualite-air/liste/jour');
 			$statuscmd = $this->getCmd(null, 'status');
 			$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/liste/jour");
+			log::add('qualiteair','debug',"Data : ".print_r($data, true));
 			$count = 0;
 			while ( $data === false && $count < 3 ) {
 				$data = @simplexml_load_file("http://www.lcsqa.org/indices-qualite-air/liste/jour");
