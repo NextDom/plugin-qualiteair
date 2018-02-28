@@ -1,0 +1,34 @@
+{
+    "plugins\/qualiteair\/plugin_info\/info.xml": {
+        "Plugin pour connaitre les Indices Qualité de l'Air d'une ville": "Plugin, um die Luftqualitätsindizes einer Stadt abzurufen",
+        "Aucune": "Keine"
+    },
+    "plugins\/qualiteair\/core\/class\/qualiteair.class.php": {
+        "Impossible de se connecter à www.lcsqa.org.": "Impossible de se connecter à www.lcsqa.org."
+    },
+    "plugins\/qualiteair\/desktop\/php\/qualiteair.php": {
+        "Ajouter une ville": "Stadt hinzufügen",
+        "Rechercher": "Suchen",
+        "Gestion": "Verwaltung",
+        "Configuration": "Konfiguration",
+        "Mes villes": "Mes villes",
+        "Général": "Général",
+        "Nom de l'équipement": "Gerätename",
+        "Objet parent": "Elternobjekt",
+        "Aucun": "Keine",
+        "Activer": "Aktivieren",
+        "Visible": "Sichtbar",
+        "Ville": "Ville",
+        "Mes indicateurs": "Mes indicateurs",
+        "Id": "Id",
+        "Nom": "Name",
+        "Valeur par défaut": "Standardwert",
+        "Supprimer": "Löschen",
+        "Sauvegarder": "Speichern"
+    },
+    "plugins\/qualiteair\/desktop\/js\/qualiteair.js": {
+        "Nom": "Name",
+        "Historiser": "Archivieren",
+        "Afficher": "Afficher"
+    }
+}
